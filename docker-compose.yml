@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  # Service 1: Your Python App
+  my-app:
+    build: .             # Build the Dockerfile in this folder
+    ports:
+      - "8080:5000"      # Open the door
+    environment:
+      - REDIS_HOST=redis # Tell the app: "The database is at the address 'redis'"
+    depends_on:
+      - redis            # Wait for Redis to start first
+
+  # Service 2: The Database
+  redis:
+    image: "redis:alpine" # Download the official Redis image (tiny version)

@@ -1,4 +1,3 @@
-# my-incident-app
 # Distributed Hit Counter: A Microservices Project
 ## Project Overview
 This is a containerized web application designed to demonstrate **Microservices Architecture** and **Service Discovery**. 
